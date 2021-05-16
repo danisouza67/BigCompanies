@@ -12,13 +12,13 @@ package bigcompanies;
 public class Product {
 
     private int price, delivery, depotId, productId;
-    private String product, companyID;
+    private String metal, companyID;
 
     public Product(int depotId, String companyId, int productId, String product) {
         this.depotId = depotId;
         this.companyID = companyId;
         this.productId = productId;
-        this.product = product;
+        this.metal = product;
         price = randomThisGuy(1, 10);
         delivery = randomThisGuy(1, 10);
         
@@ -36,7 +36,31 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" + "price=" + price + ", delivery=" + delivery + ", depotId=" + depotId + ", productId=" + productId + ", product=" + product + ", companyID=" + companyID + '}';
+        return "Product{" + "price=" + price + ", delivery=" + delivery + ", depotId=" + depotId + ", productId=" + productId + ", metal=" + metal + ", companyID=" + companyID + '}';
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public int getDelivery() {
+        return delivery;
+    }
+
+    public int getDepotId() {
+        return depotId;
+    }
+
+    public int getProductId() {
+        return productId;
+    }
+
+//    public String getProduct() {
+//        return product;
+//    }
+
+    public String getCompanyID() {
+        return companyID;
     }
 
 }
